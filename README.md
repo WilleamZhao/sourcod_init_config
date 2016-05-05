@@ -1,0 +1,2 @@
+# sourcod_emacs
+SCEmacs
