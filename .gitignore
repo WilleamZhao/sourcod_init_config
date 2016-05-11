@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 *.el~
 spacemacs/
+=======
+# Compiled
+*.elc
+
+# Packaging
+.cask
+>>>>>>> 0b7627f1619d0d242c67989bd90f97eaee2706e5
