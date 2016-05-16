@@ -1,0 +1,41 @@
+;; -*- coding: utf-8 -*-
+a 阿
+a-a-a 阿阿阿
+d 的
+de 的
+f-z 防止
+fang-zhi 防止
+g-d 滚动
+gun-dong 滚动
+h 好
+hao 好
+n 你
+n-h 你好
+n-h-a 你好阿
+n-s 你是
+ni 你
+ni-hao 你好
+ni-hao-a 你好阿
+ni-shi 你是
+p 拼
+p-y 拼音
+pin 拼
+pin-yin 拼音
+r 入 如
+ru 入 如
+s 输 谁 是 时
+shei 谁
+shi 是 时
+shu 输
+shui 谁
+t-d 跳动
+tiao-dong 跳动
+w-j 我叫
+wo-jiao 我叫
+y 音
+y-m 页面
+ye-mian 页面
+yin 音
+z 赵 中
+zhao 赵
+zhong 中
