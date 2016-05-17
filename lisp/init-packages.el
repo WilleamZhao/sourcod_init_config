@@ -21,10 +21,13 @@
 		      exec-path-from-shell
 		      ;; --- Themes ---
 		      monokai-theme
+		      ;; 中文输入法
 		      chinese-pyim
 		      popup
-		      ace-pinyin
+		      ;; 彩虹猫
 		      nyan-mode
+		      ;; 自动跳转
+		      ace-jump-buffer
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -41,16 +44,14 @@
   (dolist (pkg my/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
+
 ;; 输入拼音
 (require 'chinese-pyim)
-
 (setq default-input-method "chinese-pyim")
 (global-set-key (kbd "M-i") 'pyim-convert-pinyin-at-point)
 (global-set-key (kbd "C-<SPC>") 'toggle-input-method)
 
 (setq pyim-use-tooltip 'popup)
-;; (setq-default pyim-punctuation-half-width-functions '(probe-function4 probe-function5 probe-function6))
-;; (setq pyim-dicts-manager-scel2pyim-command "~/.emacs.d/otherpackages/scel2pyim")
 (setq pyim-dicts
       '((:name "pyim-bigdict.pyim" :file "~/.emacs.d/pyim/dicts/pyim-bigdict.pyim" :coding utf-8 :dict-type pinyin-dict)
         (:name "sogou.pyim" :file "~/.emacs.d/otherpackages/scel2pyim/sogou.pyim" :coding utf-8 :dict-type sogou-dict)))
@@ -61,30 +62,10 @@
 
 ;; 这里你要将路径改为你的东西放置的文件夹
 (require 'nyan-mode)
-(setq default-mode-line-format
-      (list ""
-            'mode-line-modified
-            "<"
-            "sourcod" ;; 这里可以改成自己的名字神马的
-            "> "
-            "%10b"
-            '(:eval (when nyan-mode (list (nyan-create))));;注意添加此句到你的format配置列表中
-            " "
-            'default-directory
-            " "
-            "%[("
-            'mode-name
-            'minor-mode-list
-            "%n"
-            'mode-line-process
-            ")%]--"
-            "Line %l--"
-            '(-3 . "%P")
-            "-%-"))
-(nyan-mode t);;启动nyan-mode
-(nyan-start-animation);;开始舞动吧（会耗cpu资源）
-;(setq-default nyan-wavy-trail t)
-;(nyan-mode)
-;(nyan-start-animation)
+(nyan-mode t)
+;;启动nyan-mode
+(nyan-start-animation)
+;;开始舞动吧（会耗cpu资源）
+(setq-default nyan-wavy-trail t)
 
 (provide 'init-packages)

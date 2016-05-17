@@ -2,3 +2,7 @@
 spacemacs/
 spacemacs
 *.elc
+auto-save-list/
+elpa/
+pyim/
+otherpackages/
