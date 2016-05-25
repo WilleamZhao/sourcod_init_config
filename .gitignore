@@ -1,4 +1,4 @@
-*.el~
+c*.el~
 spacemacs/
 spacemacs
 *.elc
@@ -6,3 +6,8 @@ auto-save-list/
 elpa/
 pyim/
 otherpackages/
+.qshell/
+session*
+.org-id-locations
+chinese-fonts-setup/
+recentf

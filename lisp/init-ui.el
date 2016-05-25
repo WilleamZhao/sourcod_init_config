@@ -1,14 +1,21 @@
+;; (require 'color-theme-solarized)
+;; (load-theme 'dracula t)
+
+;; (require 'color-theme)
+;; (color-theme-initialize)
+;; (color-theme-solarized)
 (load-theme 'monokai t)
 
-(custom-set-variables '(spacemacs-theme-custom-colors
-			'((act1 . "#ff0000")
-			  (act2 . "#0000ff")
-			  (base . "#ffffff"))))
+;;(custom-set-variables '(spacemacs-theme-custom-colors
+;;			'((act1 . "#ff0000")
+;;			  (act2 . "#0000ff")
+;;			  (base . "#ffffff"))))
 
 ;; 显示行号
 (global-linum-mode 1)
 
-
+;; 关闭文件滑动控件
+(scroll-bar-mode -1)
 
 ;; 关闭启动帮助画面
 (setq inhibit-splash-screen 1)
